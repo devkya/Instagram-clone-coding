@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('instagram.urls')),
 ]
 
 # MEDIA_URL로 요청이 오면, MEDIA_ROOT에서 찾아서 서빙함
@@ -15,4 +16,5 @@ if settings.DEBUG:
     
     urlpatterns += [
         path('__debug__/', include(debug_toolbar.urls)),
+        
     ]
