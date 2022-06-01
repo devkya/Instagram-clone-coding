@@ -11,7 +11,9 @@ class User(AbstractUser):
     class GenderChoices(models.TextChoices):
         MALE = "M", "남성"
         FEMALE = "F", "여성"
-        
+    
+    # 새로운 테이블 구현 없이, 중간 테이블 생성
+    # from_user_id, to_user_id
     follower_set = models.ManyToManyField('self', blank=True)
     following_set = models.ManyToManyField('self', blank=True)
     
