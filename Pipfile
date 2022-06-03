@@ -9,6 +9,7 @@ djangorestframework = "*"
 pillow = "*"
 django-cors-headers = "*"
 djangorestframework-simplejwt = "*"
+django-pydenticon = "*"
 
 [dev-packages]
 pathlib = "*"
